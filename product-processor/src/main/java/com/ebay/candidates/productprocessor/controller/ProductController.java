@@ -25,7 +25,7 @@ public class ProductController {
     productService.sortAttributesByName(product);
     return ResponseEntity.ok(product);
   }
-  @GetMapping(path = "/product/100")
+  @GetMapping(path = "/product/{id}")
   public ResponseEntity<Product> get(@PathVariable("id") int productId ,@RequestBody Product product) {
 
     return ResponseEntity.ok(product);
